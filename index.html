@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexstyle.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="button-container">
+                <button onclick="goToHomePage()">Home</button>
+                <button onclick="goToSection('biography')">Biography/Skills</button>
+                <button onclick="goToSection('photogallerydump')">Photo Gallery Dump</button>
+                <button onclick="goToMediaSection()">My Media</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="containerone">
+        <section>
+            <p class="uno">WELCOME TO MY PAGE!</p>
+            <h3 class="left-text">Hello there! I am Enzo Cinco</h3>
+            <div class="media-wrapper">
+                <video class="left-video" width="1000" height="600" controls>
+                    <source src="FRONTPAGE/vid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p class="dos"><b>"THE PAGE WHERE I SHARE MY PASSION"</b></p>
+        </section>
+    </div>
+
+    <script>
+        function goToSection(sectionId) {
+            window.location.href = sectionId + '.html';
+        }
+
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+
+        function goToMediaSection() {
+            window.location.href = 'media.html';
+        }
+    </script>
+</body>
+</html>

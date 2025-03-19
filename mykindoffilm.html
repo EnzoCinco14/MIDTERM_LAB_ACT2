@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mybeats.css">
+    <title>My Kind of Film</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #FFC1B4;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .video-clip {
+            margin: 20px auto;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .containerone {
+            width: 80%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .genre-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .audio-info {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        nav .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav button {
+            background-color: #007074;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #034C53;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="button-container">
+                <button onclick="goToHomePage()">Home</button>
+                <button onclick="goToSection('biography')">Biography/Skills</button>
+                <button onclick="goToSection('photogallerydump')">Photo Gallery Dump</button>
+                <button onclick="goToMediaSection()">My Media</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="containerone">
+        <section>
+            <h1>Welcome to My Kind of Film!</h1>
+            <p>Here are some of my favorite TV shows and movies. I hope you enjoy the clips I've selected!</p>
+
+            <div class="genre-section" id="tv-shows">
+                <h2 class="genre-title">TV Shows</h2>
+
+                <div class="video-clip">
+                    <h3>The Walking Dead</h3>
+                    <p class="audio-info">Genre: Drama, Horror, Thriller | Rating: 9.5/10</p>
+                    <iframe src="https://www.youtube.com/embed/sfAc2U20uyg?si=95kZtCHxCMdGKsiJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-clip">
+                    <h3>Stranger Things</h3>
+                    <p class="audio-info">Genre: Drama, Fantasy, Horror | Rating: 8.7/10</p>
+                    <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="genre-section" id="movies">
+                <h2 class="genre-title">Movies</h2>
+
+                <div class="video-clip">
+                    <h3>John Wick: Chapter 4</h3>
+                    <p class="audio-info">Genre: Action, Crime, Thriller | Rating: 6.9/10</p>
+                    <iframe src="https://www.youtube.com/embed/yjRHZEUamCc?si=XBaug0-RsxYIWNhK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-clip">
+                    <h3>The Purge</h3>
+                    <p class="audio-info">Genre: Thriller, Horror, Action | Rating: 6.9/10</p>
+                    <iframe src="https://www.youtube.com/embed/K0LLaybEuzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goToSection(sectionId) {
+            window.location.href = sectionId + '.html';
+        }
+
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+
+        function goToMediaSection() {
+            window.location.href = 'media.html';
+        }
+    </script>
+</body>
+</html>

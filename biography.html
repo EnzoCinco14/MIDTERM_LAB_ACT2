@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bio.css">
+    <title>Biography/Skills Page</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="button-container">
+                <button onclick="goToHomePage()">Home</button>
+                <button onclick="goToSection('biography')">Biography/Skills</button>
+                <button onclick="goToSection('photogallerydump')">Photo Gallery Dump</button>
+                <button onclick="goToSection('media')">My Media</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="containerone">
+        <section>
+            <h1>My Skills & Biography</h1>
+            <p>Here are some of my key skills and experiences:</p>
+            
+            <div class="image-gallery">
+                <a href="THUMBNAIL/img1.jpg" target="_blank">
+                    <figure>
+                        <img src="THUMBNAIL/img1.jpg" alt="Motorcycling" title="This is a motorcycle ride.">
+                        <figcaption>Motorcycling - I enjoy short/long rides.</figcaption>
+                    </figure>
+                </a>
+                <a href="THUMBNAIL/img2.jpg" target="_blank">
+                    <figure>
+                        <img src="THUMBNAIL/img2.jpg" alt="Guitar" title="This is me playing guitar.">
+                        <figcaption>Guitar - Strumming my favorite songs.</figcaption>
+                    </figure>
+                </a>
+                <a href="THUMBNAIL/img3.jpg" target="_blank">
+                    <figure>
+                        <img src="THUMBNAIL/img3.jpg" alt="Singing" title="This is me singing.">
+                        <figcaption>Singing - Sharing my little passion in music.</figcaption>
+                    </figure>
+                </a>
+                <a href="THUMBNAIL/img4.jpg" target="_blank">
+                    <figure>
+                        <img src="THUMBNAIL/img4.jpg" alt="Sports" title="This is me playing my favorite sport.">
+                        <figcaption>Sports - Playing my favorite sport.</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goToSection(sectionId) {
+            window.location.href = sectionId + '.html';
+        }
+
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
